@@ -1,23 +1,36 @@
+# OS/IDE
 .DS_Store
 .idea/
 .vscode/
 
+# Python
 __pycache__/
 *.py[cod]
 *.egg-info/
+*.pyo
+*.pyd
+*.so
 dist/
 build/
 
-.env
+# Virtualenv
 .venv/
 venv/
 
+# Env files
+.env
+.env.*
+
+# Django
+db.sqlite3
 staticfiles/
 media/
-db.sqlite3
 
+# Localization
+*.mo
+*.pot
+
+# Coverage / pytest
 htmlcov/
 .coverage*
 .pytest_cache/
-
-*.mo
