@@ -35,7 +35,7 @@ Shop API (Django REST + JWT + Celery)
 
 Клонировать проект:
 ```bash
-git clone https://github.com/your-username/shop_project.git
+git clone https://github.com/dzmitrysafronau/shop_project.git
 cd shop_project
 ```
 
