@@ -1,10 +1,17 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
+from rest_framework.validators import UniqueValidator
 from .models import Product, CartItem, Order, OrderItem
 
 
 class RegisterSerializer(serializers.ModelSerializer):
-
+    email = serializers.EmailField(
+        required=True,
+        validators=[UniqueValidator(
+            queryset=User.objects.all(),
+            message="Пользователь с таким e-mail уже существует."
+        )]
+    )
     password = serializers.CharField(write_only=True, min_length=8)
 
     class Meta:
